@@ -41,10 +41,10 @@ def load_model():
     # Kerasa / TensorFlow
     os.environ['TF_CPP_MIN_LOG_LEVEL'] = '5'
     from keras.models import load_model
-    from layers import BilinearUpSampling2D
+    from layers import UpSampling2D
 
     # Custom object needed for inference and training
-    custom_objects = {'BilinearUpSampling2D': BilinearUpSampling2D, 'depth_loss_function': None}
+    custom_objects = {'UpSampling2D': UpSampling2D, 'depth_loss_function': None}
 
     # Load model into GPU / CPU
     return load_model(args.model, custom_objects=custom_objects, compile=False)

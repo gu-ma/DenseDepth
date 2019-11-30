@@ -49,7 +49,7 @@ runPath = outputPath + runID
 pathlib.Path(runPath).mkdir(parents=True, exist_ok=True)
 print('Output: ' + runPath)
 
- # (optional steps)
+# (optional steps)
 if True:
     # Keep a copy of this training script and calling arguments
     with open(__file__, 'r') as training_script: training_script_content = training_script.read()
